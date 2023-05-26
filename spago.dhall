@@ -12,7 +12,15 @@ to generate this file without the comments in this block.
 -}
 { name = "purescript-concur-starter"
 , dependencies =
-  [ "concur-core", "concur-react", "console", "effect", "prelude" ]
+  [ "concur-core"
+  , "concur-react"
+  , "console"
+  , "effect"
+  , "maybe"
+  , "numbers"
+  , "prelude"
+  , "tuples"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }

@@ -10,11 +10,13 @@ import Control.Monad (class Monad)
 import Data.CommutativeRing ((*), (+))
 import Data.EuclideanRing ((-), (/))
 import Data.Function (($))
-import Data.Functor (($>), (<$>))
+import Data.Functor (($>), (<$>), map)
 import Data.Semigroup ((<>))
 import Data.Show (show)
 import Data.Unit (Unit)
 import Effect (Effect)
+import Probability (Probability(..))
+import ProbabilityUI (switchableProbability)
 
 
 -- Let's build a simple program that lets us convert from feet to inches and vice versa.
@@ -97,4 +99,4 @@ ui = loop converter 0
 
 -- Let's run it
 main :: Effect Unit
-main = runWidgetInDom "root" ui
+main = runWidgetInDom "root" $ D.div [] $ map switchableProbability [Proba 0.80, Odds 40.0 1.0, Evidence 30.0]

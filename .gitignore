@@ -7,7 +7,9 @@ output/
 prod/
 html/index.js
 /.psc-package
+/.psci_modules
 /.cache
 /dist
 /.spago
 /.parcel-cache
+/.direnv
